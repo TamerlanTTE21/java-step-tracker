@@ -53,6 +53,10 @@ public class StepTracker {
         System.out.println("Введите число месяца");
 
         int month = scanner.nextInt();
+        if (month < 1 || month > 12) {
+            System.out.println("Неправильный номер месяца");
+            return;
+        }
 
         MonthData monthData = monthToData[month - 1];
         monthData.printDaysAndStepsFromMonth();
